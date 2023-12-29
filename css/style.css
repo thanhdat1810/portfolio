@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    font-family: 'Hind', sans-serif;
+
+
+}
+
+/*HEADER  */
+header {
+    position: absolute;
+    z-index: 10;
+    top: 30px;
+    left: 0;
+    width: 100%;
+
+}
+
+#portNavbar .nav-item .nav-link {
+    color: white;
+    transition: all .5s;
+}
+
+#portNavbar .nav-item:hover .nav-link {
+    color: #35a22c;
+}
+
+/* /* Cách 1: bằng điểm và code nằm dưới */
+/* 100+10+10=120 */
+/* #portNavbar .active.nav-link{
+    color: #35a22c;  */
+
+/* Cách 2: điểm cao,không quan tâm thứ tự */
+/* 100+10+10+10=130 */
+
+#portNavbar .nav-item.active .nav-link {
+    color: #35a22c;
+}
+
+
+
+
+
+/* Responsive Header */
+/* @media [type] (type: ) */
+
+@media screen and (max-width:992px) {
+
+    /* vùng ảnh hưởng của code css: nhỏ hơn và bằng 992px */
+    header .navbar-toggler {
+        background-color: #35a22c;
+        color: white;
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    /* vùng ảnh hưởng của code css: nhỏ hơn và bằng 576px */
+    header .navbar-toggler {
+        background-color: pink;
+    }
+
+    header .navbar-nav {
+        background-color: white;
+    }
+
+    #portNavbar .nav-item .nav-link {
+        color: #35a22c;
+    }
+
+    #portNavbar .nav-item:hover {
+        background-color: #35a22c;
+    }
+    
+    #portNavbar .nav-item:hover .nav-link {
+        color: white;
+    }
+
+}
+
+/* khi các vùng màn hình nhỏ hơn liền kề nhau cóchung thiết kế với màn hình lớn thì chỉ cần xét css ở màn hình lớn  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* điều kiện hiển thị code css : ở vùng màn hình nhỏ hơn và bằng 92px */
+
+
+/* CHỈNH TỈ LỆ HÌNH */
+/* Cách 1: lấy kích thướt hình chuẩn (px) */
+#portCarouselCaptions .carousel-item>img {
+    /* height: 1332px; */
+    /* 
+    *vh (carousel): viewport height( lấy kích thướt height của màn hình)
+    *vw (chữ h1 h2 - tiêu đề quan trọng không bị rớt hàng khi coi ở các màn hình khác nhau): viewport wight( lấy kích thướt wight của màn hình
+    %: lấy heigh, thẻ của cha gần nhất(hình sản phẩm)
+     */
+
+    height: 100vh;
+    object-fit: cover;
+
+}
+
+.carousel-caption img {
+    width: 140px;
+    border-radius: 50%;
+}
+
+.carousel-caption {
+    /* canh giữa cho position */
+    /* % (width, height, top, left,...) lấy theo thẻ cha gần nhất */
+    top: 50%;
+    left: 50%;
+    /* % của tranlate lấy theo kích thướt của thẻ con */
+    transform: translate(-50%, -50%);
+}
+
+.projects__row {
+    gap: 30px 0;
+}
+
+/* AWARD */
+.award {
+    padding: 70px 0;
+    background-image: url(../img/memphis_3.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+    background-position: left bottom;
+}
+
+.award__left {
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, .3);
+    padding: 45px;
+    border-radius: 20px;
+    backdrop-filter: blur(8px);
+
+}
